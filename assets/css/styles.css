@@ -377,6 +377,10 @@ img{
 }
 
 /*==================== ABOUT ====================*/
+.profile{
+    margin-bottom: 2rem;
+}
+
 .about__img{
     width: 200px;
     border-radius: .5rem;
@@ -593,6 +597,9 @@ img{
     row-gap: 1.5rem;
 }
 
+li{
+    text-align: center;
+}
 
 .footer__link:hover{
     color: var(--first-color-lighter);
