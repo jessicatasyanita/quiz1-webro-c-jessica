@@ -436,7 +436,7 @@ img{
 }
 /*==================== SKILLS ====================*/
 .skills__container{
-    row-gap: 0;
+    flex-direction: column;
 }
 
 .skills__header{
@@ -471,6 +471,7 @@ img{
 }
 
 .skills__list{
+    flex-direction: column;
     row-gap: 1.5rem;
     padding-left: 2.7rem;
 }
