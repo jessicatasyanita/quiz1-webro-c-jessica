@@ -6,11 +6,14 @@
 
         <!--==================== UNICONS ====================-->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
         
         <link rel="icon" href="assets/img/JT round.png">
         
         <!--==================== CSS ====================-->
         <link rel="stylesheet" href="assets/css/styles.css">
+       
 
         <title>Jessica Tasyanita</title>
     </head>
@@ -67,7 +70,75 @@
 
             <!--==================== LOCAL FOOD ====================-->
             <section class="food section" id="food">
-                
+                <h2 class="section__title title">Surabaya's Food</h2>
+                    
+                <div class="food__container container swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <!--==================== LOCAL FOOD 1 ====================-->                    
+                        <div class="food__content grid swiper-slide">
+                            <img src="assets/img/rawon.jpeg" alt="" class="food__img">
+
+                            <div class="food__data">
+                                <h3 class="food__title">Rawon</h3>
+                                <p class="food__description">Rawon is an Indonesian beef soup. Originating from Surabaya, East Java, rawon utilizes the black keluak nut as the main seasoning, which gives a dark color and nutty flavor to the soup.</p>
+                            </div>
+                        </div>
+                        <!--==================== LOCAL FOOD 2 ====================-->                    
+                        <div class="food__content grid swiper-slide">
+                            <img src="assets/img/sate-klopo.jpeg" alt="" class="food__img">
+
+                            <div class="food__data">
+                                <h3 class="food__title">Sate Klopo</h3>
+                                <p class="food__description">This <i>sate klopo</i> can use chicken or beef. Beef or chicken will later be pierced like a skewer usually, then given grated coconut and burned using charcoal and clamped.</p>
+                            </div>
+                        </div>
+                        <!--==================== LOCAL FOOD 3 ====================-->                    
+                        <div class="food__content grid swiper-slide">
+                            <img src="assets/img/rujak.jpeg" alt="" class="food__img">
+
+                            <div class="food__data">
+                                <h3 class="food__title">Rujak</h3>
+                                <p class="food__description"><i>Rujak Cingur</i> is a fruit-vegetables salad with spicy sauce. Literally “cingur” means mouth in Javanese. This food has become the unique taste of Surabaya.</p>
+                            </div>
+                        </div>
+                        <!--==================== LOCAL FOOD 4 ====================-->                    
+                        <div class="food__content grid swiper-slide">
+                            <img src="assets/img/sego-sambel.jpeg" alt="" class="food__img">
+
+                            <div class="food__data">
+                                <h3 class="food__title">Sego Sambel</h3>
+                                <p class="food__description"><i>Sego sambel</i> becomes one of the typical foods of Surabaya, East Java that has a spicy taste. Food consisting of rice, chili, and various side dishes. The rice is served on a plate, then topped with a side dish of omelet, fried soybeans, tempeh, tofu, chicken, or meat.</p>
+                            </div>
+                        </div>
+                        <!--==================== LOCAL FOOD 5 ====================-->                    
+                        <div class="food__content grid swiper-slide">
+                            <img src="assets/img/lontong-balap.jpeg" alt="" class="food__img">
+
+                            <div class="food__data">
+                                <h3 class="food__title">Lontong Balap</h3>
+                                <p class="food__description"><i>Lontong Balap</i> is an Indonesian traditional rice dish, well known in Javanese cuisine, made of lontong (pressed rice cake), tauge (bean sprouts), fried tofu, lentho (fried mashed beans), fried shallots, sambal petis and sweet soy sauce.</p>
+                            </div>
+                        </div>
+                        <!--==================== LOCAL FOOD 6 ====================-->                    
+                        <div class="food__content grid swiper-slide">
+                            <img src="assets/img/tahu-campur.jpeg" alt="" class="food__img">
+
+                            <div class="food__data">
+                                <h3 class="food__title">Tahu Campur</h3>
+                                <p class="food__description"><i>Tahu campur</i>, is a Surabaya tofu dish. The dish consists of sliced fried tofu, rice cakes, cassava patty cakes, fresh bean sprouts, fresh lettuce, yellow noodles, and krupuk crackers, served in savoury beef stew, garnished with fried onions, and chili sauce.</p>
+                            </div>
+                        </div>                 
+                    </div>
+
+                    <div class="swiper-button-next">
+                        <i class="uil uil-angle-right-b swiper-food-icon"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="uil uil-angle-left-b swiper-food-icon"></i>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
 
             </section>
         </main>
@@ -76,9 +147,8 @@
         <footer class="footer">
             <div class="footer__bg">
                 <div class="footer__container container grid">
-                    <div>
-                        <h1 class="footer__title">Jessica Tasyanita</h1>
-                        <span class="footer__subtitle">Informatics Student</span>
+                    <div class="footer__logo">
+                        <a href="index.html"><img src="assets/img/JT round.png"/></a>
                     </div>
 
                     <ul class="footer__links">
@@ -119,6 +189,7 @@
         </a>
 
         <!--==================== MAIN JS ====================-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
         <script src="assets/js/main.js"></script>
     </body>
 </html>
