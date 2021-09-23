@@ -568,9 +568,10 @@ img{
 
 .food__img{
     width: 265px;
-    height: 150px;
+    height: 190px;
     border-radius: .5rem;
     justify-self: center;
+    object-fit: cover;
 }
 
 .food__title{
