@@ -102,12 +102,12 @@ themeButton.addEventListener('click', () => {
     // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
-})
+});
 
 
 
 
-/* */
+/*==================== SWIPER ====================*/ 
 
 let swiper = new Swiper('.food__container', {
     cssMode: true,
@@ -122,3 +122,28 @@ let swiper = new Swiper('.food__container', {
     },
 
 });
+
+/*==================== MODAL ====================*/ 
+
+// const modalViews = document.querySelectorAll('.place__modal');
+// const modalBtns = document.querySelectorAll('.place__button');
+// const modalClose = document.querySelectorAll('.place__modal-close');
+
+// console.log('modal view: ', modalViews);
+// let modal = function(modalClick){
+//     modalViews[modalClick].classList.add('active-modal')
+// }
+
+// modalBtns.forEach((modalBtn, i) => {
+//     modalBtn.addEventListener('click', () =>{
+//         modal(i);
+//     })
+// });
+
+// modalClose.forEach((modalClose) => {
+//     modalClose.addEventListener('click', () => {
+//         modalViews.forEach((modalView) =>{
+//             modalView.classList.remove('active-modal');
+//         })
+//     })
+// })
