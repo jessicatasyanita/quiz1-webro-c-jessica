@@ -158,7 +158,7 @@ img{
 
 .grid{
     display: flex;
-    gap: 1.5rem;
+    flex-direction: column;
 }
 
 .container{
@@ -223,6 +223,7 @@ img{
 }
 
 .nav__list{
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
@@ -278,8 +279,6 @@ img{
 }
 .home__container{
     flex-direction: column;
-    gap: 1rem;
-    grid-template-columns: max-content;
 }
 
 .home__content{
@@ -288,11 +287,6 @@ img{
     align-items: center;
 }
 
-.home__social{
-    display: grid;
-    grid-template-columns: max-content;
-    row-gap: 1rem;
-}
 
 .home__social-icon{
     font-size: 1.25rem;
@@ -304,7 +298,7 @@ img{
 }
 
 .home__blob{
-    width: 200px;
+    width: 250px;
     fill: #F8F0DF;
 }
 
@@ -337,6 +331,7 @@ img{
     transition: .3s;
     width: 100%;
     justify-content: center;
+    margin-top: 4rem;
 }
 
 .home__scroll-button:hover{
@@ -703,7 +698,7 @@ li{
     width: 90px;
     height: 90px;
     display: flex;
-    justify-content: center;
+    align-self: center;
 }
 /*========== SCROLL UP ==========*/
 .scrollup{
@@ -783,8 +778,15 @@ li{
 
 /* For medium devices */
 @media screen and (min-width: 568px) {
+    .grid{
+        display: flex;
+        flex-direction: row;
+    }
+    .nav__list{
+        justify-content: space-around;
+    }
     .home__content{
-        grid-template-columns: max-content 1fr 1fr;
+        padding-top: 2rem;
     }
     .home__data{
         grid-column: initial;
@@ -793,11 +795,58 @@ li{
         order: 1;
         justify-self: center;
     }
+    .home__container{
+        flex-direction: column;
+    }
+    .home{
+        height: 400px;
+    }
+    .home__scroll-button{
+        margin-top: 2rem;
+    }
 
-    .about__container,
-    .skills__container,
-    .footer__container{
-        grid-template-columns: repeat(2, 1fr);
+   .about__container{
+       justify-content: space-around;
+       align-content: center;
+       column-gap: 2rem;
+   }
+   .about__data{
+    width: 400px;
+    align-items: center;
+   }
+   .about__buttons{
+    justify-content: center;
+   }
+
+   .about__description{
+       text-align: left;
+       justify-content: center;
+   }
+   .profile-img{
+       width: 250px;
+       height: 250px;
+   }
+   .skills{
+       margin: 4rem 0;
+   }
+   .skills__container{
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+       column-gap: 1rem;
+    }
+   .hometown__container{
+    flex-direction: column;
+    }
+    .swiper-wrapper{
+        height: wrap;
+    }
+    .food__content{
+        flex-direction: column;
+    }
+    .food__img{
+        width: 400px;
+        height: 200px;
+        align-self: center;
     }
     .footer__links{
         flex-direction: row;
@@ -805,12 +854,17 @@ li{
     }
     .footer__logo{
         display: flex;
-        justify-content: center;
+        align-self: start;
     }
 
 }
 
 @media screen and (min-width: 768px) {
+    .grid{
+        display: flex;
+        flex-direction: row;
+    }
+
     .container{
         margin-left: auto;
         margin-right: auto;
@@ -851,6 +905,7 @@ li{
     }
     .nav__list{
         display: flex;
+        flex-direction: row;
         column-gap: 2rem;
     }
     .nav__menu{
@@ -861,11 +916,11 @@ li{
     }
 
     .home__container{
-        row-gap: 5rem;
+        flex-direction: column;
     }
 
     .home__content{
-        padding-top: 5.5rem;
+        padding-top: 2.5rem;
         column-gap: 2rem;
     }
 
@@ -874,9 +929,13 @@ li{
     }
     .home__scroll{
         display: block;
+        
+    }
+    .home__scroll-button{
+        margin-bottom: 2rem;
     }
     .about__container{
-        column-gap: 5rem;
+        column-gap: 2rem;
     }
     .about__img{
         width: 350px;
@@ -889,6 +948,17 @@ li{
     }
     .about__buttons{
         justify-content: initial;
+    }
+    .skills__container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+     }
+    .hometown__container{
+        flex-direction: column;
+    }
+    .food__content{
+        column-gap: 1rem;
     }
     .footer__container{
         grid-template-columns: repeat(2, 1fr);
@@ -910,7 +980,11 @@ li{
         width: 320px;
     }
 
-    .home__social{
-        transform: translateX(-6rem);
+    .home__scroll{
+        margin-bottom: 2rem;
+    }
+
+    .title-profile{
+        padding: 2rem 0;
     }
 }
