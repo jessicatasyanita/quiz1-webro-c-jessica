@@ -275,7 +275,7 @@ img{
 
 /*==================== HOME ====================*/
 .home{
-    height: 725px;
+    height: 800px;
 }
 .home__container{
     flex-direction: column;
@@ -285,21 +285,12 @@ img{
     /* grid-template-columns: .5fr 3fr; */
     padding-top: 3.5rem;
     align-items: center;
-}
-
-
-.home__social-icon{
-    font-size: 1.25rem;
-    color: var(--first-color);
-}
-
-.home__social-icon:hover{
-    color: var(--first-color-alt);
+    justify-content: space-between;
 }
 
 .home__blob{
     width: 250px;
-    fill: #F8F0DF;
+    fill: var(--first-color);
 }
 
 .home__blob-img{
@@ -369,6 +360,15 @@ img{
     transition: .3s;
 }
 
+.button--white{
+    background-color: #FFF;
+    color: var(--first-color);
+}
+
+.button--white:hover{
+    background-color: #FFF;
+}
+
 .button--flex{
     display: inline-flex;
     align-items: center;
@@ -406,6 +406,12 @@ img{
     margin-bottom: var(--mb-2-5);
 }
 
+.about__data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .about__info{
     display: flex;
     justify-content: space-evenly;
@@ -434,9 +440,6 @@ img{
 }
 
 .read__more-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 1rem;
 }
 
@@ -561,9 +564,113 @@ img{
 .skills__open .skills__arrow{
     transform: rotate(-180deg);
 }
+
+/*==================== JOURNEY ====================*/
+.journey{
+    padding-top: 1rem !important;
+}
+
+.journey__tabs{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--mb-2);
+}
+
+.journey__button{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+}
+
+.journey__button:hover{
+    color: var(--first-color);
+}
+
+.journey__icon{
+    font-size: 1.8rem;
+    margin-right: var(--mb-0-25);
+}
+
+.journey__data{
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    column-gap: 1.5rem;
+}
+
+.journey__title{
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+}
+
+.journey__subtitle{
+    display: inline-block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.journey__calendar{
+    font-size: var(--smaller-font-size);
+}
+
+.journey__rounder{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-color: var(--first-color);
+    border-radius: 50%;
+}
+
+.journey__line{
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: var(--first-color);
+    transform: translate(6px, -7px);
+}
+
+.journey [data-content]{
+    display: none;
+}
+
+.journey__active[data-content]{
+    display: block;
+}
+
+.journey__button.journey__active{
+    color: var(--first-color);
+}
 /*==================== HOMETOWN ====================*/
 .hometown__container{
     flex-direction: column;
+}
+
+.hometown-home{
+    text-align: center;
+}
+
+.hometown__bg{
+    background-color: var(--first-color-second);
+    padding-top: 3rem;
+}
+
+.hometown__title{
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-0-75);
+}
+
+.hometown__description{
+    margin-bottom: var(--mb-1-5);
+}
+
+.hometown__title,
+.hometown__description{
+    color: #FFF;
+}
+
+.hometown__img{
+    width: 232px;
+    justify-self: center;
+    align-self: center;
 }
 
 /*==================== FOOD ====================*/
@@ -625,6 +732,54 @@ img{
 .swiper-pagination-bullet{
     outline: none;
 }
+.food__place-content{
+    position: relative;
+    background-color: var(--first-color);
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+    transition: .3s;
+}
+
+.food__place-content:hover{
+    box-shadow: 0 4px 8px rgba(0,0,0, .15);
+}
+
+.food__place-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.food__place__logo{
+    font-size: 5rem;
+    color: #FFF;
+    align-self: center;
+}
+
+.food__place__title{
+    font-size: var(--h3-font-size);
+    margin-top: var(--mb-1);
+    margin-bottom: var(--mb-0-5);
+    color: #FFF;
+    align-self: center;
+    font-weight: var(--font-semi-bold);
+}
+
+.food__place__button{
+    cursor: pointer;
+    font-size: small;
+    color: #FFF;
+    align-self: center;
+}
+
+.food__place__button:hover{
+    color: var(--first-color-lighter);
+}
+.food__place__button:hover .button-icon{
+    transform: translateX(.25rem);
+}
+
 /*==================== TOURIST PLACES ====================*/
 .tourist__container{
     display: grid;
@@ -738,7 +893,7 @@ img{
 }
 
 
-/*==================== PROJECT IN MIND ====================*/
+/*==================== HOMETOWN HOME ====================*/
 
 
 /*==================== TESTIMONIAL ====================*/
@@ -886,11 +1041,21 @@ li{
     .home__blob{
         width: 180px;
     }
+    .about__buttons-home{
+        align-self: center;
+    }
 
     .skills__title{
         font-size: var(--normal-font-size);
     }
 
+    .journey__data{
+        gap: .5rem;
+    }
+
+    .hometown__img{
+        width: 200px;
+    }
     .footer__logo{
         display: flex;
         justify-content: center;
@@ -905,6 +1070,10 @@ li{
     .nav__logo{
         width: 60px;
         height: 60px;
+    }
+
+    .about__buttons-home{
+        align-self: center;
     }
 }
 /* For medium devices */
@@ -964,6 +1133,16 @@ li{
        display: grid;
        grid-template-columns: repeat(2, 218px);
        column-gap: 1rem;
+    }
+    .journey__sections{
+        display: grid;
+        grid-template-columns: .6fr;
+        justify-content: center;
+    }
+ 
+    .hometown__container-home{
+        display: flex;
+        flex-direction: column;
     }
    .hometown__container{
     flex-direction: column;
@@ -1106,8 +1285,44 @@ li{
         grid-template-columns: repeat(2, 1fr);
         column-gap: 1rem;
      }
+
+     .journey__tabs{
+         justify-content: center;
+     }
+     .journey__button{
+         margin: 0 var(--mb-1);
+     }
+     .journey__sections{
+         grid-template-columns: .5fr;
+     }
+
     .hometown__container{
         flex-direction: column;
+    }
+    .hometown-home{
+        text-align: initial;
+    }
+    .hometown__bg{
+        background: none;
+    }
+    .hometown__container-home,
+    .food__container-home{
+        background-color: var(--first-color-second);
+        border-radius: 1rem;
+        padding: 3rem 2.5rem 0;
+        display: flex;
+        justify-content: space-between;
+        /* grid-template-columns: 1fr max-content; */
+        column-gap: 4rem;
+    }
+
+    .food__container-home{
+        justify-content: space-around;
+        flex-direction: row-reverse;
+    }
+
+    .hometown__data{
+        padding-top: .8rem;
     }
 
     .tourist__container{
@@ -1151,6 +1366,9 @@ li{
         padding: 2rem 0;
     }
 
+    .hometown-home .section{
+        padding: 2rem !important;
+    }
     .tourist__container{
         display: grid;
         gap: 1.5rem;

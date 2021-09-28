@@ -50,13 +50,6 @@ skillsHeader.forEach((el) => {
 });
 
 
-/*==================== SERVICES MODAL ====================*/
-
-
-
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-
-
 /*==================== CHANGE BACKGROUND HEADER ====================*/ 
 function scrollHeader(){
     const nav = document.getElementById('header');
@@ -103,47 +96,3 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 });
-
-
-
-
-/*==================== SWIPER ====================*/ 
-
-let swiper = new Swiper('.food__container', {
-    cssMode: true,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-
-});
-
-/*==================== MODAL ====================*/ 
-
-// const modalViews = document.querySelectorAll('.place__modal');
-// const modalBtns = document.querySelectorAll('.place__button');
-// const modalClose = document.querySelectorAll('.place__modal-close');
-
-// console.log('modal view: ', modalViews);
-// let modal = function(modalClick){
-//     modalViews[modalClick].classList.add('active-modal')
-// }
-
-// modalBtns.forEach((modalBtn, i) => {
-//     modalBtn.addEventListener('click', () =>{
-//         modal(i);
-//     })
-// });
-
-// modalClose.forEach((modalClose) => {
-//     modalClose.addEventListener('click', () => {
-//         modalViews.forEach((modalView) =>{
-//             modalView.classList.remove('active-modal');
-//         })
-//     })
-// })

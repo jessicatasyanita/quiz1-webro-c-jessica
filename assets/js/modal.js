@@ -2,7 +2,6 @@ const modalViews = document.querySelectorAll('.place__modal');
 const modalBtns = document.querySelectorAll('.place__button');
 const modalClose = document.querySelectorAll('.place__modal-close');
 
-console.log('modal view: ', modalViews);
 let modal = function(modalClick){
     modalViews[modalClick].classList.add('active-modal')
 }
