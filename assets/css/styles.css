@@ -890,16 +890,6 @@ img{
     visibility: visible;
 }
 
-
-/*==================== HOMETOWN HOME ====================*/
-
-
-/*==================== TESTIMONIAL ====================*/
-
-
-/*==================== CONTACT ME ====================*/
-
-
 /*==================== FOOTER ====================*/
 .footer {
     padding-top: 2rem;
@@ -1354,7 +1344,7 @@ li{
     .home.section{
         margin-top: 4.5rem;
     }
-    
+
     .home__blob{
         width: 320px;
     }
