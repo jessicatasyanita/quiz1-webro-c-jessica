@@ -274,9 +274,7 @@ img{
 }
 
 /*==================== HOME ====================*/
-.home{
-    height: 800px;
-}
+
 .home__container{
     flex-direction: column;
 }
@@ -1098,9 +1096,7 @@ li{
     .home__container{
         flex-direction: column;
     }
-    .home{
-        height: 400px;
-    }
+
     .home__scroll-button{
         margin-top: 2rem;
     }
@@ -1263,6 +1259,7 @@ li{
     }
     .about__container{
         column-gap: 2rem;
+
     }
     .about__img{
         width: 350px;
@@ -1354,6 +1351,10 @@ li{
         padding: 0;
     }
 
+    .home.section{
+        margin-top: 4.5rem;
+    }
+    
     .home__blob{
         width: 320px;
     }
@@ -1362,9 +1363,6 @@ li{
         margin-bottom: 2rem;
     }
 
-    .title-profile{
-        padding: 2rem 0;
-    }
 
     .hometown-home .section{
         padding: 2rem !important;
